@@ -40,7 +40,7 @@ public class ProductController {
 	
 	@ApiOperation(value = "Get product by product's ID")
 	@RequestMapping(value="/{productId}", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<Optional<Product>> getItem(@PathVariable("productId") Long productId) {
+	public ResponseEntity<Optional<Product>> getProductById(@PathVariable("productId") Long productId) {
 		
 		Optional<Product> product = productService.find(productId);
 		
